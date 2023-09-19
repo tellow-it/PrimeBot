@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  bot:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    container_name: prime_bot
+    restart: always
+    command: python3 main.py
+    depends_on:
+      - redis
+  redis:
+    image: redis:5-alpine
+    restart: on-failure
+    volumes:
+      - redis-data:/data
