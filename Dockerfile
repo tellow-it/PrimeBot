@@ -9,10 +9,10 @@ RUN apt-get -y update && \
 RUN mkdir /app
 WORKDIR /app
 
-COPY requirements.txt .
+COPY requirments.txt .
 
 # pip & requirements
 RUN python3 -m pip install --user --upgrade pip && \
-    python3 -m pip install -r requirements.txt
+    python3 -m pip install -r requirments.txt
 
 COPY . .
