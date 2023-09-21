@@ -3,7 +3,7 @@ from typing import Any
 from redis import asyncio as aioredis
 from typing import List
 
-redis = aioredis.Redis(db=5)
+redis = aioredis.Redis(host='redis', db=5)
 
 
 async def get_value(key: str) -> Any:

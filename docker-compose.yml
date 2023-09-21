@@ -13,3 +13,5 @@ services:
   redis:
     image: redis:5-alpine
     restart: on-failure
+    ports:
+      - 6379:6379
